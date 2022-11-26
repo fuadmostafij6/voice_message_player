@@ -81,6 +81,7 @@ class _VoiceMessageState extends State<VoiceMessage>
             SizedBox(width: 3.w()),
 
          Container(
+           width: MediaQuery.of(context).size.width-50,
            child: _durationWithNoise(context),
          )
 
