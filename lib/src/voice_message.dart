@@ -78,10 +78,13 @@ class _VoiceMessageState extends State<VoiceMessage>
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _playButton(context),
-            Spacer(),
-            _durationWithNoise(context),
+            SizedBox(width: 3.w()),
 
-            Spacer()
+         Container(
+           child: _durationWithNoise(context),
+         )
+
+
 
             /// x2 button will be added here.
             // _speed(context),
