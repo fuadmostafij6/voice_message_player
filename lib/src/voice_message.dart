@@ -26,7 +26,7 @@ class VoiceMessage extends StatefulWidget {
     this.contactPlayIconColor = Colors.black26,
     this.meFgColor = const Color(0xffffffff),
     this.played = false,
-    this.onPlay,
+    this.onPlay, required this.width,
   }) : super(key: key);
 
   final String audioSrc;
@@ -38,6 +38,7 @@ class VoiceMessage extends StatefulWidget {
       mePlayIconColor,
       contactPlayIconColor;
   final bool played, me;
+  final double width;
   Function()? onPlay;
 
   @override
@@ -81,7 +82,7 @@ class _VoiceMessageState extends State<VoiceMessage>
             SizedBox(width: 3.w()),
 
          Container(
-           width: MediaQuery.of(context).size.width-50,
+           width: widget.width,
            child: _durationWithNoise(context),
          )
 
