@@ -286,6 +286,7 @@ class _VoiceMessageState extends State<VoiceMessage>
 
   @override
   void dispose() {
+    _controller!.dispose();
     _player.dispose();
     super.dispose();
   }
